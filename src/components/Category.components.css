@@ -1,0 +1,20 @@
+@font-face {
+  font-family: Jaapokki;
+  src: url("../font/jaapokki-regular.woff");
+  font-weight: bold;
+}
+
+.category {
+  font-family: Jaapokki;
+  color: #e7bb33;
+  /* -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in; */
+}
+
+.category:hover {
+  color: #ffce38;
+  cursor: pointer;
+}
