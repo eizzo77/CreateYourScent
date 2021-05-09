@@ -13,7 +13,7 @@ export const Header = () => {
     const location = useLocation().pathname;
 
     useEffect(() => {
-        logoRef.current.style.display = location === "/quiz" && "none";
+        logoRef.current.style.display = location.toLowerCase() === "/quiz" && "none";
     },[])
 
     window.onscroll = () => {

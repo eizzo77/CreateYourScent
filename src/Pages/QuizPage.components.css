@@ -7,81 +7,9 @@
   margin-top: 100px;
 }
 
-.level-title {
-  color: black;
-  text-align: center;
-}
-
-.jar-selection-container {
-  display: flex;
-  justify-content: space-between;
-  height: 60vh;
-  margin: 10px auto;
+.selections-nav {
   width: 70vw;
-}
-
-.glass > .blur {
-  background: url(https://image.made-in-china.com/202f0j00mzeYKUMlEkoh/Empty-Glass-Jars-Frosted-Glass-Candle-Holder-with-Wooden-Lid-for-Sale.jpg)
-    no-repeat center center/cover;
-}
-
-.ceramic > .blur {
-  background: url(http://sc04.alicdn.com/kf/HTB1eXdmbSRRMKJjy0Flq6xFepXal.jpg)
-    no-repeat center center/cover;
-}
-
-.blur {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-}
-
-.jar-selection-container > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 33.33%;
-  position: relative;
-}
-
-.jar-selection-container > div > .blur:hover {
-  filter: blur(2px);
-}
-
-.btn-container > .btn {
-  margin: 1%;
-}
-
-.btn-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
-}
-
-.btn {
-  letter-spacing: 0.1em;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 45px;
-  max-width: 160px;
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-  width: 100%;
-  background-color: wheat;
-  text-align: center;
-}
-.btn:hover {
-  text-decoration: none;
-}
-
-.jar-selection-container > div > .blur:hover + .btn-container {
-  opacity: 1;
-}
-
-.btn-container:hover {
-  opacity: 1;
+  border: 1px solid black;
+  height: 10vh;
+  margin: auto auto;
 }
