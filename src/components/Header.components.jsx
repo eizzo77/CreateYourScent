@@ -3,7 +3,7 @@ import {useLocation} from "react-router-dom";
 import {Category} from "./Category.components";
 import "./Header.components.css";
 
-const LOGO_HEIGHT = 180.5
+const LOGO_HEIGHT = 180.5;
 const LOGO_WIDTH = 300;
 
 export const Header = () => {
@@ -34,12 +34,10 @@ export const Header = () => {
         <div className="header">
             <Category  title="Category 1"/>
             <Category  title="Cateogry 2"/>
-            <Category  title="Cateogry 3"/>
             <div ref={logoRef} className={`logo`} style={{height:logoHeight, width:logoWidth}}>
             </div>
+            <Category title="Cateogry 3"/>
             <Category title="Cateogry 4"/>
-            <Category title="Cateogry 5"/>
-            <Category title="Cateogry 6"/>
         </div>
     );
 }
