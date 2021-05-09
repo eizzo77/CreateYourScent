@@ -1,3 +1,5 @@
 .homepage {
   overflow: auto;
+  overflow-y: clip;
+  height: 200vh;
 }

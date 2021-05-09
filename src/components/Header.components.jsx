@@ -1,21 +1,29 @@
-import {useState,useRef} from "react";
+import {useState,useRef, useEffect} from "react";
+import {useLocation} from "react-router-dom";
 import {Category} from "./Category.components";
 import "./Header.components.css";
 
+const LOGO_HEIGHT = 180.5
+const LOGO_WIDTH = 300;
 
 export const Header = () => {
-    const [logoHeight,setLogoHeight] = useState(180.5);
-    const [logoWidth,setLogoWidth] = useState(300);
+    const [logoHeight,setLogoHeight] = useState(LOGO_HEIGHT);
+    const [logoWidth,setLogoWidth] = useState(LOGO_WIDTH);
     const logoRef = useRef(null);
+    const location = useLocation().pathname;
+
+    useEffect(() => {
+        logoRef.current.style.display = location === "/quiz" && "none";
+    },[])
 
     window.onscroll = () => {
-        const height = 180.5 - Math.min(180.5, document.documentElement.scrollTop);
+        const height = LOGO_HEIGHT - Math.min(LOGO_HEIGHT, document.documentElement.scrollTop);
         let width;
         if (height === 0) {
             width = 0;
             logoRef.current.style.display = "none";
         } else {
-            width = 300 - Math.min(300,document.documentElement.scrollTop);
+            width = LOGO_WIDTH - Math.min(LOGO_WIDTH,document.documentElement.scrollTop);
             logoRef.current.style.display = "block";
         }
         setLogoHeight(height);
