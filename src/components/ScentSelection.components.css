@@ -1,6 +1,6 @@
 .cards-list {
   z-index: 0;
-  width: 45%;
+  width: 50%;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -39,6 +39,11 @@
   font-size: 30px;
   margin-top: -80px;
   height: 40px;
+}
+
+.card_image p {
+  color: black;
+  text-align: center;
 }
 
 .card:hover {
