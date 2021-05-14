@@ -1,16 +1,20 @@
 import {useState} from "react";
+import { ColorSelection } from "../components/ColorSection.components";
 import {JarSelection} from "../components/JarSelection.components";
 import { ScentSelection } from "../components/ScentSelection.components";
 import {WaxSelection} from "../components/WaxSelection.components";
 import "./QuizPage.components.css"
 
-const quizsections = [  <JarSelection title="Pick The Type of Jar" />,
-                        <WaxSelection title="Choose your favorite Wax"/>,
-                        <ScentSelection title="What are your favorite Scents?"/>]
-
 export const QuizPage = () => {
 
+    const [candleObj,setCandleObj] = useState({});
     const [sectionIndex,setSectionIndex] = useState(0);
+
+    const quizsections = [  <JarSelection title="Pick The Type of Jar" items={[{type:"Glass",subTypes:["Glass 1","Glass 2"]},{type:"Ceramic",subTypes:["Ceramic","Clay"]},{type:"No Jar"}]}/>,
+                            <WaxSelection title="Choose your favorite Wax"/>,
+                            <ScentSelection title="What are your favorite Scents?"/>,
+                            <ColorSelection title="Pick the Color of Your Candle" colors={["red","orange","yellow","green","blue","indigo","violet"]} setCandleObj={setCandleObj}/>,
+                            <JarSelection title="What Kind of Wick?" items={[{type:"Wooden"},{type:"Cotton"}]}/>]
 
     const arrowOnClick = (movement) => {
         const indexAfterClick = sectionIndex + movement;
@@ -29,8 +33,7 @@ export const QuizPage = () => {
             <div className="arrow next" onClick={() => arrowOnClick(1)}>
             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
             </div>
-            {/* <div className="selections-nav">
-            </div> */}
+            {console.log(candleObj)}
         </div>
     );
 }

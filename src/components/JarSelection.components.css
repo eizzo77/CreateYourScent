@@ -29,9 +29,9 @@
 
 .jar-selection-container > div {
   display: flex;
+  flex: auto;
   flex-direction: column;
   justify-content: center;
-  width: 33.33%;
   position: relative;
 }
 
