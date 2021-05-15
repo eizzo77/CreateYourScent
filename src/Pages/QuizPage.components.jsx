@@ -7,12 +7,14 @@ import "./QuizPage.components.css"
 
 export const QuizPage = () => {
 
-    const [candleObj,setCandleObj] = useState({});
+    const [candleObj,setCandleObj] = useState({
+        scents: [],
+    });
     const [sectionIndex,setSectionIndex] = useState(0);
 
-    const quizsections = [  <JarSelection title="Pick The Type of Jar" items={[{type:"Glass",subTypes:["Glass 1","Glass 2"]},{type:"Ceramic",subTypes:["Ceramic","Clay"]},{type:"No Jar"}]}/>,
-                            <WaxSelection title="Choose your favorite Wax"/>,
-                            <ScentSelection title="What are your favorite Scents?"/>,
+    const quizsections = [  <JarSelection title="Pick The Type of Jar" items={[{type:"Glass",subTypes:["Glass 1","Glass 2"]},{type:"Ceramic",subTypes:["Ceramic","Clay"]},{type:"No Jar"}]} setCandleObj={setCandleObj}/>,
+                            <WaxSelection title="Choose your favorite Wax" items={[{name:"Pure BeeWax",description:"Pure BeeWax 100%"},{name:"White BeeWax",description:"Great White BeeWax"},{name:"Soy Vegan Wax",description:"some description about this"},{name:"Massage Coconut Pure Wax",description:"some description about this"},{name:"Chia Seeds Oil",description:"some description about this"}]} setCandleObj={setCandleObj}/>,
+                            <ScentSelection title="What are your favorite Scents?" items={[{name:"Vanilla",image:"https://miro.medium.com/max/1000/1*cZIIlLozeU52HiFX9pT5cQ.jpeg"},{name:"Patchuli",image:"https://miro.medium.com/max/1000/1*cZIIlLozeU52HiFX9pT5cQ.jpeg"},{name:"Lavander",image:"https://miro.medium.com/max/1000/1*cZIIlLozeU52HiFX9pT5cQ.jpeg"}]} setCandleObj={setCandleObj}/>,
                             <ColorSelection title="Pick the Color of Your Candle" colors={["red","orange","yellow","green","blue","indigo","violet"]} setCandleObj={setCandleObj}/>,
                             <JarSelection title="What Kind of Wick?" items={[{type:"Wooden"},{type:"Cotton"}]}/>]
 

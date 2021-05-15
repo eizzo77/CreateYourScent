@@ -1,14 +1,24 @@
+import {Scent} from "./Scent.components";
 import "./ScentSelection.components.css";
 
-export const ScentSelection = ({title}) => {
-    return(
-        <>
-        <h3 className="level-title">
-                {title}
-            </h3>
-        <div class="cards-list">
-  
-<div class="card 1">
+export const ScentSelection = ({title,items,setCandleObj}) => {
+
+  const renderScents = items.map((scent) => {
+    return (
+      <>
+        <Scent scent={scent} key={scent.name} setCandleObj={setCandleObj}/>
+      </>
+    );
+  })
+
+  return(
+    <>
+      <h3 className="level-title">
+        {title}
+      </h3>
+      <div class="cards-list">
+        {renderScents}
+{/* <div class="card 1">
   <div class="card_image"> 
   <img src="https://miro.medium.com/max/1000/1*cZIIlLozeU52HiFX9pT5cQ.jpeg" />
   <p>Vanilla</p>
@@ -22,7 +32,7 @@ export const ScentSelection = ({title}) => {
     </div>
 </div>
 
-<div class="card 3">
+<div class="card 3"
   <div class="card_image">
     <img src="https://www.happyingredients.com/user/documents/images/huiles_essentielles/mcith/lavender-3479492_1920_cropped_800x800.jpg" />
     <p>Lavander</p>
@@ -97,7 +107,7 @@ export const ScentSelection = ({title}) => {
     <img src="https://daf-yomi.com/Data/UploadedFiles/UserFiles/cider3.JPG" />
     <p>Cedar</p>
     </div>
-  </div>
+  </div> */}
 
 </div>
 </>

@@ -21,6 +21,16 @@
     no-repeat center center/cover;
 }
 
+.wooden > .blur {
+  background: url(https://www.nzsoapandcandle.co.nz/images/543944/pid1864116/photos/wood-wicks.jpg)
+    no-repeat center center/cover;
+}
+
+.cotton > .blur {
+  background: url(https://i.etsystatic.com/13469623/r/il/c60d39/1702808029/il_570xN.1702808029_edan.jpg)
+    no-repeat center center/cover;
+}
+
 .blur {
   height: 100%;
   width: 100%;

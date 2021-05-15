@@ -8,7 +8,7 @@ export const ColorSelection = ({colors,setCandleObj}) => {
     const renderColors = colors.map((color) => {
         return (
             <React.Fragment key={color}>
-                <input class={color} type="radio" name="hat-color" value={color} id={`hat-color-${color}`} onClick={()=>setCandleObj({color})}/>
+                <input class={color} type="radio" name="hat-color" value={color} id={`hat-color-${color}`} onClick={()=>setCandleObj((prevState)=> ({...prevState,color}))}/>
                 <label class={color} for={`hat-color-${color}`}>{color}</label>
             </React.Fragment>
         );

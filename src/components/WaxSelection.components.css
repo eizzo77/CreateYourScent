@@ -21,8 +21,10 @@ body {
 #hexcontainer {
   position: relative;
   text-align: center;
-  margin: 50px 0 35px 0;
+  margin: auto;
   padding: 20px 0;
+  width: 70%;
+  margin-top: 20px;
 }
 
 .hex1,
@@ -66,19 +68,19 @@ body {
   background-size: cover;
 }
 
-#hl1 {
+.h1 {
   background-image: url("https://image.made-in-china.com/2f0j00gkPUpuhqJBoW/Yellow-Bee-Wax-100-Pure-Beeswax-for-Candles.jpg");
 }
-#hl2 {
+.h2 {
   background-image: url("http://cdn.shopify.com/s/files/1/0936/6818/products/White_Beeswax_1_Pound_Bricks_9c3e969e-28a6-4bba-a2a4-ce4e26e3cca2_grande.jpg?v=1483630416");
 }
-#hl3 {
+.h3 {
   background-image: url("https://i.pinimg.com/originals/22/1b/33/221b33f07ad8c0de6e40ac0e679d37b9.jpg");
 }
-#hl4 {
+.h4 {
   background-image: url("https://sc04.alicdn.com/kf/H2f3db62b7c564f47902e07d60b2ae444c.jpg");
 }
-#hl5 {
+.h5 {
   background-image: url("https://www.freshlycosmetics.com/modules/ingredientesfreshly/images/1534432657-aceite-de-chia.jpg");
 }
 
