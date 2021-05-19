@@ -30,7 +30,9 @@ export const QuizPage = () => {
         const fetch = async () => {
             const quizData = await axios.get("http://localhost:5555/api/quiz-items");
             setQuizData(quizData.data[0]);
-            toggleShowSpinner(false);
+            setTimeout(()=> {
+                toggleShowSpinner(false);
+            },2000)
             setSectionIndex(0);
         }
         fetch();
