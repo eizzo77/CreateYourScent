@@ -28,7 +28,7 @@ export const QuizPage = () => {
 
     useEffect(() =>  {
         const fetch = async () => {
-            const quizData = await axios.get("http://https://in-light-candles.herokuapp.com/api/quiz-items");
+            const quizData = await axios.get("http://in-light-candles.herokuapp.com//api/quiz-items");
             setQuizData(quizData.data[0]);
             toggleShowSpinner(false);
             setSectionIndex(0);
