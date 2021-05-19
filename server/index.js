@@ -5,8 +5,8 @@ const path = require("path");
 const port = process.env.PORT || 5555;
 const app = express();
 
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
 
 const QuizItemsRouter = require("./routes/quizItemsRoutes");
 // const favouriteRouter = require("./routes/favouriteRouter");
