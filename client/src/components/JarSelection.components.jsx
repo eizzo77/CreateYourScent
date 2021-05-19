@@ -1,12 +1,11 @@
 import react from "react";
 import "./JarSelection.components.css"
 
-export const JarSelection = ({title,items,setCandleObj}) => {
-
+export const JarSelection = ({title,items,setCandleObj,property}) => {
     const renderSubTypes = (subTypes) => {
         return subTypes.map((subType) => {
             return (
-                <div className="btn" onClick={()=>setCandleObj((prevState)=> ({...prevState,jar:subType}))}>{subType} </div>
+                <div className="btn" onClick={()=>setCandleObj((prevState)=> ({...prevState,[property]:subType}))}>{subType} </div>
             ); 
         })
     }
@@ -14,11 +13,9 @@ export const JarSelection = ({title,items,setCandleObj}) => {
     const renderItems = items.map((item) => {
         return (
             <div className={item.type.toLowerCase()} key={item.type}>
-                        <div className="blur"></div>
-                        <div className="btn-container">
-                            {item.subTypes && renderSubTypes(item.subTypes)}
-                        </div>
-                    </div>
+                {item.subTypes && renderSubTypes(item.subTypes)}
+                <div className="blur"></div>
+            </div>
         );
     })
 

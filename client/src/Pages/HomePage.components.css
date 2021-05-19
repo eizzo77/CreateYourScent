@@ -1,0 +1,11 @@
+.homepage {
+  overflow: auto;
+  overflow-y: clip;
+  height: 200vh;
+}
+
+.hero {
+  height: 100vh;
+  background: url(https://images.unsplash.com/photo-1599313804992-44e32565fd6d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80)
+    no-repeat center center/cover;
+}

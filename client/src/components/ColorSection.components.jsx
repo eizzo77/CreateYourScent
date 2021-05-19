@@ -1,7 +1,7 @@
 import React from "react";
 import "./ColorSection.components.css"
 
-export const ColorSelection = ({colors,setCandleObj}) => {
+export const ColorSelection = ({title,colors,setCandleObj}) => {
 
     // const [chosenColor,setChosenColor] = React.useState("");
 
@@ -15,10 +15,15 @@ export const ColorSelection = ({colors,setCandleObj}) => {
     })
 
     return(
+        <>
+        <h3 className="level-title">
+        {title}
+         </h3>
         <div className="color-picker-container">
         <div class="colorPicker">
             {renderColors}
         </div>
         </div>
+        </>
     );
 }

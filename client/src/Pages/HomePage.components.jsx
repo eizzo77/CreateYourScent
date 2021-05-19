@@ -5,6 +5,9 @@ import "./HomePage.components.css";
 export const HomePage = () => {
     return (
         <div className="homepage">
+            <div className="hero">
+                
+            </div>
             <PhotoAccordion />
         </div>
     );

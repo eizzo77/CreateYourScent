@@ -21,7 +21,7 @@ export const Scent = ({scent,setCandleObj}) => {
     return(
         <div class="card" onClick={onScentClick}>
         <div class="card_image"> 
-          <img src={scent.image} style={{filter: checkedScent? "brightness(0.6)" : "brightness(1)"}}/>
+          <img src={scent.imageURL} style={{filter: checkedScent? "brightness(0.6)" : "brightness(1)"}}/>
           {checkedScent && <i class="fas fa-check fa-3x"></i>}
           <p>{scent.name}</p>
         </div>

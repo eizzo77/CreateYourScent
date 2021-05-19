@@ -43,27 +43,20 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
+  align-items: center;
 }
 
 .jar-selection-container > div > .blur:hover {
   filter: blur(2px);
 }
 
-.btn-container > .btn {
-  margin: 1%;
-}
-
-.btn-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
+.jar-selection-container > div > .btn {
+  margin: 5px;
 }
 
 .btn {
   letter-spacing: 0.1em;
-  cursor: pointer;
+  width: 100%;
   font-size: 14px;
   font-weight: 400;
   line-height: 45px;
@@ -71,18 +64,24 @@
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
-  width: 100%;
   background-color: wheat;
   text-align: center;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
 }
+
 .btn:hover {
   text-decoration: none;
-}
-
-.jar-selection-container > div > .blur:hover + .btn-container {
+  outline: 1px black solid;
   opacity: 1;
 }
 
-.btn-container:hover {
+.jar-selection-container > div:hover .btn {
   opacity: 1;
+}
+
+.btn:hover ~ .blur {
+  filter: blur(2px);
 }
