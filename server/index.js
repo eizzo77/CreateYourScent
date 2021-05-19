@@ -15,9 +15,11 @@ app.use("/api/quiz-items", QuizItemsRouter);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
-} else {
-  app.use(express.static(path.join(__dirname, "../client/public")));
 }
+
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+});
 
 // app.use("/api/recipes", recipeRouter);
 // app.use("/api/favourites", favouriteRouter);
