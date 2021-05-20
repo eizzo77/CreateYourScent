@@ -1,0 +1,10 @@
+.card-container {
+  height: 30vh;
+  width: 15vw;
+}
+
+.card-img {
+  background: url("https://images.squarespace-cdn.com/content/v1/5a8f7efd1137a61595c69972/1555371563986-IOI8LGXVH3EH4HBJU21F/ke17ZwdGBToddI8pDm48kPgv0ZItuOPhOZ1JEt0uc617gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UdZuMiofIYA1YNg-cpohaGgSn53-I2sbAQSHhq9SgyQCm_c7z1K7QovUjPUprEAi5Q/mindful-writer-beeswax-candles.JPG")
+    no-repeat center center/contain;
+  height: 100%;
+}

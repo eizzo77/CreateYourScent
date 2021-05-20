@@ -1,4 +1,5 @@
 import {useState,useRef, useEffect} from "react";
+import {Link} from "react-router-dom"
 import {useLocation} from "react-router-dom";
 import {Category} from "./Category.components";
 import "./Header.components.css";
@@ -6,15 +7,15 @@ import "./Header.components.css";
 const LOGO_HEIGHT = 180.5;
 const LOGO_WIDTH = 300;
 
-export const Header = () => {
+export const Header = ({categories}) => {
     const [logoHeight,setLogoHeight] = useState(LOGO_HEIGHT);
     const [logoWidth,setLogoWidth] = useState(LOGO_WIDTH);
     const logoRef = useRef(null);
     const location = useLocation().pathname;
 
     useEffect(() => {
-        logoRef.current.style.display = location.toLowerCase() === "/quiz" && "none";
-    },[])
+        logoRef.current.style.display = location.toLowerCase() === "/quiz" ? "none" : "block";
+    },)
 
     window.onscroll = () => {
         const height = LOGO_HEIGHT - Math.min(LOGO_HEIGHT, document.documentElement.scrollTop);
@@ -32,12 +33,12 @@ export const Header = () => {
 
     return (
         <div className="header">
-            <Category  title="Category 1"/>
-            <Category  title="Cateogry 2"/>
+            <Link to="/quiz"><Category  title="Create Your Scent"/></Link>
+            <Link to="/store"><Category  title="Store"/></Link>
             <div ref={logoRef} className={`logo`} style={{height:logoHeight, width:logoWidth}}>
             </div>
-            <Category title="Cateogry 3"/>
-            <Category title="Cateogry 4"/>
+            <Link to="/affiliations"><Category title="Affiliations"/></Link>
+            <Link to="/aboutus"><Category title="About Us"/></Link>
         </div>
     );
 }
