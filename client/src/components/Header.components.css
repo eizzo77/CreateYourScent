@@ -3,17 +3,25 @@
 }
 
 .header {
+  font-family: Jaapokki;
+  color: #e7bb33;
   background-color: #3f4444;
   position: fixed;
   width: 100vw;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   z-index: 20;
   opacity: 0.9;
 }
 
-.header > a {
+.categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.categories > a {
   margin: 1vw;
   text-align: center;
 }
@@ -26,5 +34,6 @@
 }
 
 a {
+  color: #e7bb33;
   text-decoration: none;
 }

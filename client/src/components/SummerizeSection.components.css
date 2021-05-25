@@ -5,18 +5,9 @@
   justify-content: center;
   width: 70%;
   margin: auto;
+  margin-bottom: 250px;
 }
 
 .details > div {
   padding-bottom: 2%;
-}
-
-.add-to-cart-btn {
-  background-color: black;
-  color: #f4f4f4;
-  text-align: center;
-  padding: 1em;
-  border-radius: 20px;
-  letter-spacing: 0.5em;
-  margin-top: 30%;
 }

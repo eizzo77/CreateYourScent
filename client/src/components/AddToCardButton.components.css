@@ -1,0 +1,9 @@
+.add-to-cart-btn {
+  background-color: black;
+  color: #f4f4f4;
+  text-align: center;
+  padding: 1em;
+  border-radius: 20px;
+  letter-spacing: 0.5em;
+  cursor: pointer;
+}

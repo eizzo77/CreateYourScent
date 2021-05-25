@@ -4,7 +4,8 @@
   font-weight: bold;
 }
 
-.homepage {
+.homepage,
+p {
   color: #222222;
   overflow: auto;
   overflow-y: clip;

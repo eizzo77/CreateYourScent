@@ -18,6 +18,7 @@ export const Header = ({categories}) => {
     },)
 
     window.onscroll = () => {
+        console.log("HERE");
         const height = LOGO_HEIGHT - Math.min(LOGO_HEIGHT, document.documentElement.scrollTop);
         let width;
         if (height === 0) {
@@ -33,12 +34,16 @@ export const Header = ({categories}) => {
 
     return (
         <div className="header">
+            <div></div>
+            <div className="categories">
             <Link to="/quiz"><Category  title="Create Your Scent"/></Link>
             <Link to="/store"><Category  title="Store"/></Link>
-            <div ref={logoRef} className={`logo`} style={{height:logoHeight, width:logoWidth}}>
-            </div>
+            <Link to="/"><div ref={logoRef} className={`logo`} style={{height:logoHeight, width:logoWidth}}>
+            </div></Link>
             <Link to="/affiliations"><Category title="Affiliations"/></Link>
             <Link to="/aboutus"><Category title="About Us"/></Link>
+            </div>
+            <Link to="/cart"><div className="right-bar"><i class="fas fa-shopping-cart"></i></div></Link>
         </div>
     );
 }

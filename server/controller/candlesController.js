@@ -1,10 +1,9 @@
-const quizItems = require("../models/QuizItems");
+const candles = require("../models/Candle");
 
-// const createRecipe = async (req, res) => {
+// const createCandle = async (req, res) => {
 //   try {
 //     console.log(req.body.url);
-
-//     let checkExists = await Recipe.findOne({ url: req.body.url });
+//     let checkExists = await candle.findOne({ url: req.body.url });
 //     if (checkExists) throw Error("already exists");
 //     let recipeScrapped = await recipeScrapper(req.body.url);
 //     recipeScrapped = {
@@ -22,11 +21,13 @@ const quizItems = require("../models/QuizItems");
 //     res.status(400).send(e);
 //   }
 // };
-const getQuizItems = async (req, res) => {
+
+const getCandles = async (req, res) => {
   try {
-    const quizData = await quizItems.find();
-    console.log(quizData);
-    res.status(200).send(quizData);
+    console.log("HERE");
+    const candleData = await candles.find();
+    console.log(candleData);
+    res.status(200).send(candleData);
   } catch (e) {
     res.status(404).send(e);
   }
@@ -41,5 +42,5 @@ const getQuizItems = async (req, res) => {
 //   }
 // };
 module.exports = {
-  getQuizItems,
+  getCandles,
 };

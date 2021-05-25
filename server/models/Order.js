@@ -2,12 +2,12 @@ const mongoose = require("mongoose");
 
 const orderSchema = new mongoose.Schema({
   date: {
-    type: Date,
+    type: String,
   },
-  item: {
+  candle: {
     type: Object,
   },
 });
 
-const Order = new mongoose.model("order", orderSchema);
+const Order = new mongoose.model("order", orderSchema, "order");
 module.exports = Order;

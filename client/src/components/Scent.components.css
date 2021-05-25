@@ -9,7 +9,7 @@
   transition: 0.4s;
 }
 
-i {
+.fa-check {
   position: absolute;
   color: green;
   top: 30%;

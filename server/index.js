@@ -9,9 +9,12 @@ app.use(cors());
 app.use(express.json());
 
 const QuizItemsRouter = require("./routes/quizItemsRoutes");
-// const favouriteRouter = require("./routes/favouriteRouter");
+const candleRouter = require("./routes/candleRouter");
+const orderRouter = require("./routes/orderRouter");
 
 app.use("/api/quiz-items", QuizItemsRouter);
+app.use("/api/candle", candleRouter);
+app.use("/api/order", orderRouter);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));

@@ -1,0 +1,33 @@
+.cart-page {
+  position: relative;
+  overflow: auto;
+  color: black;
+  height: 100vh;
+}
+
+.cart-container {
+  margin-top: 250px;
+}
+
+.cart-shopping-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart-item {
+  display: flex;
+  width: 50%;
+  height: 15vh;
+  flex-direction: row;
+}
+
+.cart-item > img {
+  height: 100%;
+  width: 20%;
+}
+
+.cart-item-description {
+  height: 100%;
+  width: 80%;
+}

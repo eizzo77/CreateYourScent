@@ -1,6 +1,6 @@
-import react from "react";
+import {AddToCartButton} from "./AddToCartButton.components";
 import "./SummerizeSection.components.css"
-export const SummerizeSection = ({title,candleObj}) => {
+export const SummerizeSection = ({title,candleObj,saveOrder}) => {
 
     const renderCandleDetails = Object.keys(candleObj).map((detail) => {
         console.log(detail,candleObj[detail]);
@@ -17,11 +17,9 @@ export const SummerizeSection = ({title,candleObj}) => {
                     <div className="details">
                     {renderCandleDetails}
                     </div>
-                    <div className="add-to-cart-btn">
-                        ADD TO CART
-                    </div>
                 </div>
             </div>
+            <AddToCartButton saveOrder={saveOrder} candleObj={candleObj}/>
         </>
     );
 }
